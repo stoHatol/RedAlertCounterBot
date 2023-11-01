@@ -55,7 +55,7 @@ async def countalerts(
         color=discord.Colour.blue(),
     )
 
-    embed.set_footer(text=f"Developed By Yonatan & Pikud horef | Red Alerts")
+    embed.set_footer(text=f"Developed By Yonatan, MrCatNerd & Pikud horef | Red Alerts")
 
     await intrection.response.send_message(embed=embed)
 
