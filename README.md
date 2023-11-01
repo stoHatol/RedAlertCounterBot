@@ -12,6 +12,6 @@ pip install --upgrade pip && pip install -r reqs.txt
 pip install --upgrade pip && pip install discord aiohttp
 ```
 
-Replace your token in line 10 
+Replace your token in line opts.json
 
 And run the bot!
