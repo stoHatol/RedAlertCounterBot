@@ -7,7 +7,7 @@ git clone https://github.com/stoHatol/RedAlertCounterBot
 ```sh
 pip install --upgrade pip && pip install -r reqs.txt
 
-#or
+# or
 
 pip install --upgrade pip && pip install discord aiohttp
 ```
