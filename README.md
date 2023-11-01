@@ -1,2 +1,8 @@
 # RedAlertCounterBot
-A discord.py app that used to see how many alerts were in israel in the past 24 hours
+git clone https://github.com/stoHatol/RedAlertCounterBot
+
+Install discord.py & aiohtpp
+
+Replace your token in line 10 
+
+And run the bot!
