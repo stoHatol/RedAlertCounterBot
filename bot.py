@@ -1,5 +1,6 @@
 import discord
 import aiohttp
+import json
 from discord.ext import commands
 from discord import app_commands
 
@@ -7,8 +8,11 @@ intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 
-TOKEN: str = "your bot token"
+with open("opts.json", "r") as f:
+    TOKEN: str = json.load(f)["token"]
+
 URL: str = "https://www.oref.org.il/WarningMessages/History/AlertsHistory.json"
+
 
 @bot.event
 async def on_ready():
@@ -22,12 +26,11 @@ async def on_ready():
         print(e)
 
 
-
 @bot.tree.command(name="countalerts")
 @app_commands.describe()
 async def countalerts(
-       intrection: discord.Interaction,
- ):
+    intrection: discord.Interaction,
+):
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(URL) as response:
@@ -55,5 +58,6 @@ async def countalerts(
     embed.set_footer(text=f"Developed By Yonatan & Pikud horef | Red Alerts")
 
     await intrection.response.send_message(embed=embed)
+
 
 bot.run(TOKEN)
