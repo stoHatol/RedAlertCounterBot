@@ -9,7 +9,7 @@ pip install --upgrade pip && pip install -r reqs.txt
 
 # or
 
-pip install --upgrade pip && pip install discord aiohttp
+pip install --upgrade pip && pip install discord.py aiohttp
 ```
 
 Replace your token in line opts.json
